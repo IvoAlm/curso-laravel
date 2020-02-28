@@ -10,8 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/dinamica/{flag}', function ($flag) {
-    return "Imprime o parametro {$flag}";
+Route::get('/dinamica/{flag}/outro', function ($flag) {
+    return "imprime o parametro {$flag}";
+});
+Route::get('/dinamica/{flag}', function ($diferente) {
+    return "Imprime o parametro {$diferente}";
 });
 Route::get("/testandosubdiretorio",function (){
    return view('subdiretorio.testando');
